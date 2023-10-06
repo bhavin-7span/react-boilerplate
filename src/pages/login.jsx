@@ -15,6 +15,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import AuthLayout from "../components/layout/AuthLayout";
 import { useForm } from "react-hook-form";
 import Input from "../components/base/Input";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -32,6 +33,7 @@ const Login = () => {
   const onSubmit = (value) => {
     console.log("value", value);
     navigate("/");
+    toast.success("login successfully!")
   };
 
   return (

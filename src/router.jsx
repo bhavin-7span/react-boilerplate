@@ -47,17 +47,6 @@ const Router = () => {
   const router = useRoutes(routes);
 
   return <>{router}</>;
-  // return (
-  //   <Routes>
-  //     <Route path="/" element={<Login />} />
-  //     <Route path="login" element={<Login />} />
-  //     <Route path="register" element={<Register />} />
-  //     <Route path="forgot-password" element={<ForgotPassword />} />
-  //     <Route path="verify-email" element={<VerifyEmail />} />
-  //     <Route path="reset-password" element={<ResetPassword />} />
-  //     <Route path="*" element={<Error />} />
-  //   </Routes>
-  // );
 };
 
 export default Router;

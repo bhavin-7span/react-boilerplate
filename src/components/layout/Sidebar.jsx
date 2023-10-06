@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
+import { Tooltip } from "@mui/material";
 import Logo from "../../assets/icons/logo.svg";
 import { UsersIcon } from "../icons/UsersIcon";
-import { Tooltip } from "@mui/material";
 
 const Sidebar = ({ isOpenSidebar }) => {
   return (

@@ -1,10 +1,17 @@
 import { Box, Button } from "@mui/material";
 import VerifyImage from "../assets/images/verify_email.png";
 import Logo from "../assets/icons/logo.svg";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import AuthLayout from "../components/layout/AuthLayout";
+import { toast } from "react-toastify";
 
 const VerifyEmail = () => {
+  const navigate = useNavigate();
+
+  const handleSkip = () => {
+    navigate("/");
+    toast.success("Verify email!")
+  }
   return (
     <>
       <AuthLayout image={VerifyImage}>
@@ -16,7 +23,7 @@ const VerifyEmail = () => {
             hello@example.com Please follow the link inside to continue.
           </p>
           <Box className="mt-6">
-            <Button className="w-full custom-btn" variant="contained">
+            <Button className="w-full custom-btn" variant="contained" onClick={handleSkip}>
               Skip For Now
             </Button>
           </Box>
