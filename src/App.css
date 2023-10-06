@@ -1,0 +1,6 @@
+.custom-btn {
+    @apply !bg-lightBlue;
+}
+.custom-tooltip {
+    @apply !bg-gray-400;
+}
