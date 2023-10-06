@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./lib/MuiTheme";
-// import "./lib/fontAwesome";
+import { ToastContainer } from "react-toastify";
 import AppRouter from "./router";
 import "./App.css";
 import { Provider } from "react-redux";
@@ -13,6 +13,7 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <Provider store={store}>
           <AppRouter />
+          <ToastContainer autoClose={2000} />
         </Provider>
       </ThemeProvider>
     </BrowserRouter>

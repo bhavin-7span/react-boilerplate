@@ -15,6 +15,7 @@ import GoogleIcon from "@mui/icons-material/Google";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import { useForm } from "react-hook-form";
 import Input from "../components/base/Input";
+import { toast } from "react-toastify";
 
 const Register = () => {
   const {
@@ -31,6 +32,7 @@ const Register = () => {
 
   const onSubmit = (value) => {
     console.log("value", value);
+    toast.success("User register successfully!")
   };
 
   return (
@@ -100,7 +102,7 @@ const Register = () => {
               <NavLink
                 className="text-blue-500 ml-2"
                 activeClassName="is-active"
-                to="/register"
+                to="/login"
                 exact
               >
                 Sign in instead
