@@ -2,6 +2,7 @@ import { Avatar, Menu, MenuItem, Typography } from "@mui/material";
 import { MenuIcon } from "../icons/MenuIcon";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { NotificationIcon } from "../icons/Notification";
 
 export default function Header({ toggleSidebar }) {
   const navigate = useNavigate();
@@ -48,7 +49,7 @@ export default function Header({ toggleSidebar }) {
 
   return (
     <>
-      <header className="flex justify-between items-center shadow-[0_3px_10px_rgb(0,0,0,0.2)] bg-white rounded-md w-full px-10 h-16">
+      <header className="flex justify-between sticky top-6 items-center shadow-[0_3px_10px_rgb(0,0,0,0.2)] bg-white rounded-md w-full px-10 h-16">
         <div className="flex items-center">
           <MenuIcon
             className="w-8 h-8 cursor-pointer mr-4"
@@ -56,7 +57,8 @@ export default function Header({ toggleSidebar }) {
           />
           <AppTitle pathname={location.pathname} />
         </div>
-        <div>
+        <div className="flex items-center">
+          <NotificationIcon className="h-8 w-8 mr-2" />
           <Avatar
             className="cursor-pointer"
             sx={{ bgColoe: "#E5E7EB" }}

@@ -7,7 +7,6 @@ const userApi = api.injectEndpoints({
     getUsers: build.query({
       query: () => userEndpoint,
       transformResponse: (response) => response,
-      providesTags: ['User']
     }),
   })
 })

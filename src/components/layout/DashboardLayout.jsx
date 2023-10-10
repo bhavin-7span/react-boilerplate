@@ -13,7 +13,7 @@ const DashboardLayout = () => {
   return (
     <div className="flex">
       <Sidebar isOpenSidebar={isOpenSidebar} />
-      <main className="w-full h-screen p-6 bg-gray-100">
+      <main className="w-full p-6 bg-gray-100">
         <Header toggleSidebar={toggleSidebar} />
         <Outlet />
       </main>

@@ -7,7 +7,7 @@ const Sidebar = ({ isOpenSidebar }) => {
   return (
     <>
       <div
-        className={`h-screen shadow-md ${
+        className={`h-screen shadow-md sticky top-0 ${
           isOpenSidebar
             ? "w-64 ease-in duration-150"
             : "w-20 overflow-hidden ease-in duration-150"

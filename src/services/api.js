@@ -1,9 +1,11 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
+const BASE_URL = import.meta.env.VITE_API_BASE_URL
+
 export const api = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://jsonplaceholder.typicode.com",
+    baseUrl: BASE_URL,
     // validateStatus: (response, result) => {
     // Unauthorized error handling
     //   if (response.status === 401) {
@@ -20,7 +22,7 @@ export const api = createApi({
     //   return headers
     // }
   }),
-  tagTypes: ["User"],
+  tagTypes: [],
 
   endpoints: () => ({}),
 });
